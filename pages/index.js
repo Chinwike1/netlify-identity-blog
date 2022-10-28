@@ -7,12 +7,18 @@ import Layout, { GradientBackground } from '../components/Layout';
 import ArrowIcon from '../components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
+import { useContext } from 'react';
+import { AuthContext } from '../context/authContext';
+import AuthButton from '../components/AuthButton';
 
 export default function Index({ posts, globalData }) {
+  const { user } = useContext(AuthContext);
+
   return (
     <Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} />
-      <Header name={globalData.name} />
+      <Header name={user?.email} />
+      <AuthButton />
       <main className="w-full">
         <h1 className="text-3xl lg:text-5xl text-center mb-12">
           {globalData.blogTitle}
