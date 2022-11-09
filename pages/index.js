@@ -16,7 +16,7 @@ export default function Index({ posts, globalData }) {
 
   return (
     <Layout>
-      <SEO title={globalData.name} description={globalData.blogTitle} />
+      <SEO title="Netlify Identity Auth" description={globalData.blogTitle} />
       <Header name={user?.email} />
       <AuthButton />
       <main className="w-full">
