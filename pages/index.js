@@ -1,14 +1,14 @@
 import Link from 'next/link';
-import { getPosts } from '../utils/mdx-utils';
+import { useContext } from 'react';
 
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Layout, { GradientBackground } from '../components/Layout';
 import ArrowIcon from '../components/ArrowIcon';
+import { getPosts } from '../utils/mdx-utils';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
-import { useContext } from 'react';
-import { AuthContext } from '../context/authContext';
+import { AuthContext } from '../context/AuthContext';
 import AuthButton from '../components/AuthButton';
 
 export default function Index({ posts, globalData }) {

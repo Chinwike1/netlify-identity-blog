@@ -1,6 +1,6 @@
 import '../styles/globals.css';
 import 'prismjs/themes/prism-tomorrow.css';
-import { AuthContextProvider } from '../context/authContext';
+import { AuthContextProvider } from '../context/AuthContext';
 
 function MyApp({ Component, pageProps }) {
   return (
